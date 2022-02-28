@@ -1,10 +1,8 @@
-import React from "react";
-import "../styles/components/app.css"
+import React from 'react';
+import '../styles/components/app.css';
 
-function App () {
-  return(
-    <h1>Hola mundo</h1>
-  )
+function App() {
+  return <h1>Hola mundo</h1>;
 }
 
-export { App }
+export { App };
