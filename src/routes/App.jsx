@@ -7,19 +7,22 @@ import { Information } from "../containers/Information"
 import { Payment } from "../containers/Payment"
 import { Succes } from "../containers/Succes"
 import { NotFound } from "../containers/NotFound"
+import { Layout } from "../components/Layout"
 
 
 function App () {
   return(
     <BrowserRouter>
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/checkout" element={<Checkout />} />
-        <Route exact path="/checkout/information" element={<Information />} />
-        <Route exact path="/checkout/payment" element={<Payment />} />
-        <Route exact path="/checkout/succes" element={<Succes />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <Layout>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/checkout" element={<Checkout />} />
+          <Route exact path="/checkout/information" element={<Information />} />
+          <Route exact path="/checkout/payment" element={<Payment />} />
+          <Route exact path="/checkout/succes" element={<Succes />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Layout>
     </BrowserRouter>
   )
 }
